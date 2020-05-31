@@ -1,0 +1,15 @@
+# ----------------------------------------------------------------------------
+# Copyright © 2020, Gonzalo Peña-Castellanos
+#
+# Licensed under the terms of the MIT license
+# ----------------------------------------------------------------------------
+
+commit_message: '[ci skip] New %language% translation from Crowdin'
+append_commit_message: false
+files:
+  - source: /spyder_boilerplate/spyder/locale/spyder_boilerplate.pot
+    translation: /spyder_boilerplate/spyder_boilerplate/locale/%two_letters_code%/LC_MESSAGES/%file_name%.po
+    languages_mapping:
+      two_letters_code:
+        pt-BR: pt_BR
+        zh-CN: zh_CN

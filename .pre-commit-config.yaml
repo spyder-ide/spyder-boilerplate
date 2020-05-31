@@ -1,0 +1,16 @@
+# ----------------------------------------------------------------------------
+# Copyright © 2020, Gonzalo Peña-Castellanos
+#
+# Licensed under the terms of the MIT license
+# ----------------------------------------------------------------------------
+
+# See: https://pre-commit.com/
+repos:
+-   repo: https://github.com/psf/black
+    rev: 19.10b0
+    hooks:
+    - id: black
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.3.0
+    hooks:
+    -   id: reorder-python-imports
