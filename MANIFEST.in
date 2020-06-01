@@ -2,6 +2,18 @@ include AUTHORS.md
 include CONTRIBUTING.md
 include LICENSE.txt
 include README.md
-
+recursive-exclude spyder_boilerplate *.pot
+recursive-exclude spyder_boilerplate *.po
+recursive-include spyder_boilerplate *.mo
+exclude *.yaml
+exclude *.yml
+exclude Makefile
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
+recursive-exclude docs *.bat
+recursive-exclude docs *.md
+recursive-exclude docs *.py
+recursive-exclude docs *.rst
+recursive-exclude docs Makefile
+recursive-exclude requirements *.txt
+recursive-exclude tests *.py
