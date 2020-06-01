@@ -20,8 +20,22 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-
 import spyder_boilerplate
+
+# -- Pree hook ---------------------------------------------
+# Copy markdown files
+import shutil
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+REPO = os.path.dirname(HERE)
+
+for fpath in ['README.md', 'CONTRIBUTING.md', 'AUTHORS.md']:
+    try:
+        os.remove(fpath)
+    except Exception:
+        pass
+
+    shutil.copy2(os.path.join(REPO, fpath), os.path.join(HERE, fpath.lower()))
 
 # -- General configuration ---------------------------------------------
 
@@ -31,7 +45,11 @@ import spyder_boilerplate
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.viewcode',
+    'recommonmark',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -39,8 +57,7 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
@@ -157,3 +174,7 @@ texinfo_documents = [
      'One line description of project.',
      'Miscellaneous'),
 ]
+
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}

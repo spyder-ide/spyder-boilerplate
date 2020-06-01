@@ -2,7 +2,7 @@
 
 ## Development Lead
 
-* Gonzalo Peña-Castellanos <goanpeca@example.com> [@goanpeca](https://github.com/goanpeca)
+* Gonzalo Peña-Castellanos - <goanpeca@example.com> - [@goanpeca](https://github.com/goanpeca)
 
 ## Contributors
 

@@ -1,3 +1,4 @@
 qtawesome
 qtpy
 setuptools
+

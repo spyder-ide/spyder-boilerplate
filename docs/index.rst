@@ -1,5 +1,5 @@
 Welcome to Spyder Boilerplate's documentation!
-======================================
+==============================================
 
 .. toctree::
    :maxdepth: 2
@@ -7,11 +7,10 @@ Welcome to Spyder Boilerplate's documentation!
 
    readme
    installation
-   usage
-   modules
+   usage   
    contributing
    authors
-   history
+   modules
 
 Indices and tables
 ==================
