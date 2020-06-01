@@ -58,11 +58,12 @@ jobs:
           auto-activate-base: false
           python-version: ${{ matrix.PYTHON_VERSION }}
           use-only-tar-bz2: true
+          channel: conda-forge
       - name: Create test environment
         shell: bash -l {0}
         run: |
-           conda install -n test -f requirements/conda.txt -q
-           conda install -n test -f requirements/test.txt -q
+           conda install -n test -f requirements/conda.txt -q -c conda-forge
+           conda install -n test -f requirements/test.txt -q -c conda-forge
       - name: Show test environment
         shell: bash -l {0}
         run: |
