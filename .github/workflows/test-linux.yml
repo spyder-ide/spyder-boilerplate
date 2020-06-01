@@ -62,8 +62,8 @@ jobs:
       - name: Create test environment
         shell: bash -l {0}
         run: |
-           conda install -n test -f requirements/conda.txt -q -c conda-forge
-           conda install -n test -f requirements/test.txt -q -c conda-forge
+           conda install -n test --file requirements/conda.txt -q -c conda-forge
+           conda install -n test --file requirements/test.txt -q -c conda-forge
       - name: Show test environment
         shell: bash -l {0}
         run: |
